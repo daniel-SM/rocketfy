@@ -20,6 +20,7 @@ export const Container = styled.div`
       font-size: 16px;
       padding: 0 10px;
     }
+
     button {
       width: 42px;
       height: 42px;
@@ -28,5 +29,9 @@ export const Container = styled.div`
       border: 0;
       cursor: pointer;
     }
+  }
+
+  ul {
+    margin-top: 30px;
   }
 `;

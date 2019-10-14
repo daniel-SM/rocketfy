@@ -2,16 +2,18 @@ import React from 'react';
 
 import { Container, Label } from './styles';
 
-export default function Board() {
+export default function Card({ data }) {
   return (
     <Container>
       <header>
-        <Label color="#7159c1" />
+        {data.labels.map(label =>
+          <Label key={label} color={label} />
+        )}
       </header>
 
-      <p>Lorem ipsum sit amet, dot avesilius.</p>
+      <p>{data.content}</p>
 
-      <img src="https://api.adorable.io/avatars/285/abott@adorable.png" alt=""/>
+      { data.user && <img src={data.user} alt=""/>}
     </Container>
   );
 }
